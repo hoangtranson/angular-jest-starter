@@ -10,9 +10,7 @@ import { GET_USER } from './store/user/user.action';
 export class AppComponent implements OnInit {
   title = 'angular-jest-starter';
 
-  constructor(private store: Store) {
-
-  }
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.store.dispatch(new GET_USER());

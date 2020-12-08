@@ -8,10 +8,9 @@ import { UserService } from './user.service';
 @State<UserStateModel>({
   name: 'UserState',
   defaults: {
-      users: []
+    users: [],
   },
 })
-
 @Injectable()
 export class UserState {
   constructor(private _userService: UserService) {}
@@ -25,12 +24,11 @@ export class UserState {
   public getAgentLocation({ patchState }: StateContext<UserStateModel>) {
     return this._userService.getUsers().pipe(
       map((res: any) => {
-          
         patchState({
-            users: res
-        })
+          users: res,
+        });
         return res;
-      }),
+      })
     );
   }
 }
