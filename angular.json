@@ -110,5 +110,8 @@
       }
     }
   },
-  "defaultProject": "angular-jest-starter"
+  "defaultProject": "angular-jest-starter",
+  "cli": {
+    "analytics": "93d031fd-b2f3-4a8c-a0d0-86e0299e5209"
+  }
 }
