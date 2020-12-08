@@ -16,6 +16,7 @@ npm i
 - [x] Jest
 - [x] Ngxs State Management
 - [x] Prettier
+- [ ] ESLint
 - [ ] Sample Admin Page
 
 ## Angular 11
