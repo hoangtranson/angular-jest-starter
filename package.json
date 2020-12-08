@@ -1,12 +1,11 @@
 {
-  "name": "angular-jest-sample",
+  "name": "angular-jest-starter",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "jest",
-    "test:coverage": "jest --coverage",
     "lint": "ng lint"
   },
   "private": true,
@@ -24,37 +23,40 @@
       "ts-jest": {
         "tsConfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$",
-        "astTransformers": [
-          "<rootDir>/node_modules/jest-preset-angular/InlineHtmlStripStylesTransformer"
-        ]
+        "astTransformers": {
+          "before": [
+            "<rootDir>/node_modules/jest-preset-angular/build/InlineFilesTransformer",
+            "<rootDir>/node_modules/jest-preset-angular/build/StripStylesTransformer"
+          ]
+        }
       }
     }
   },
   "dependencies": {
-    "@angular/animations": "~8.0.0",
-    "@angular/common": "~8.0.0",
-    "@angular/compiler": "~8.0.0",
-    "@angular/core": "~8.0.0",
-    "@angular/forms": "~8.0.0",
-    "@angular/platform-browser": "~8.0.0",
-    "@angular/platform-browser-dynamic": "~8.0.0",
-    "@angular/router": "~8.0.0",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "@angular/animations": "~11.0.3",
+    "@angular/common": "~11.0.3",
+    "@angular/compiler": "~11.0.3",
+    "@angular/core": "~11.0.3",
+    "@angular/forms": "~11.0.3",
+    "@angular/platform-browser": "~11.0.3",
+    "@angular/platform-browser-dynamic": "~11.0.3",
+    "@angular/router": "~11.0.3",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.800.0",
-    "@angular/cli": "~8.0.2",
-    "@angular/compiler-cli": "~8.0.0",
-    "@angular/language-service": "~8.0.0",
-    "@types/jest": "^24.0.15",
-    "@types/node": "~8.9.4",
-    "codelyzer": "^5.0.0",
-    "jest": "^24.8.0",
-    "jest-preset-angular": "^7.1.1",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "@angular-devkit/build-angular": "~0.1100.3",
+    "@angular/cli": "~11.0.3",
+    "@angular/compiler-cli": "~11.0.3",
+    "@types/jest": "^26.0.17",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^6.0.0",
+    "jest": "^26.6.3",
+    "jest-preset-angular": "^8.3.2",
+    "karma-coverage": "~2.0.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.0.2"
   }
 }
