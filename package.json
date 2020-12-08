@@ -5,11 +5,33 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "jest",
+    "lint": "ng lint"
   },
   "private": true,
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/",
+      "<rootDir>/src/test.ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/tsconfig.spec.json",
+        "stringifyContentPathRegex": "\\.html$",
+        "astTransformers": {
+          "before": [
+            "<rootDir>/node_modules/jest-preset-angular/build/InlineFilesTransformer",
+            "<rootDir>/node_modules/jest-preset-angular/build/StripStylesTransformer"
+          ]
+        }
+      }
+    }
+  },
   "dependencies": {
     "@angular/animations": "~11.0.3",
     "@angular/common": "~11.0.3",
@@ -27,17 +49,12 @@
     "@angular-devkit/build-angular": "~0.1100.3",
     "@angular/cli": "~11.0.3",
     "@angular/compiler-cli": "~11.0.3",
-    "@types/jasmine": "~3.6.0",
+    "@types/jest": "^26.0.17",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.1.0",
-    "karma-chrome-launcher": "~3.1.0",
+    "jest": "^26.6.3",
+    "jest-preset-angular": "^8.3.2",
     "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
