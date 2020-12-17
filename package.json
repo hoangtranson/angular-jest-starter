@@ -11,6 +11,11 @@
     "prettier:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments}/**/*{.ts,.html,.scss}\""
   },
   "private": true,
+  "author": {
+    "name": "Hoang Tran",
+    "email": "son.hoang01@gmail.com",
+    "url": "https://betterfullstack.com"
+  },
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
