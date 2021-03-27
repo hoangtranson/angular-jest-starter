@@ -82,6 +82,23 @@
             "browserTarget": "angular-jest-starter:build"
           }
         },
+        "angular-jest-starter": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/angular-jest-starter.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -110,8 +127,5 @@
       }
     }
   },
-  "defaultProject": "angular-jest-starter",
-  "cli": {
-    "analytics": "93d031fd-b2f3-4a8c-a0d0-86e0299e5209"
-  }
+  "defaultProject": "angular-jest-starter"
 }
