@@ -16,7 +16,7 @@ npm i
 - [x] Jest
 - [x] Ngxs State Management
 - [x] Prettier
-- [ ] ESLint
+- [x] ESLint
 - [ ] i18n
 - [ ] Sample Admin Page
 
@@ -48,3 +48,9 @@ Run `npm run prettier:check` to check files that not have good format.
 Run `npm run prettier:fix` to format all files that not have good format that we see at `npm run prettier:check`.
 
 ![prettier fix](demo/prettierfix.png)
+
+## Eslint
+
+Run `npm run lint`.
+
+![eslint](demo/eslint.png)
